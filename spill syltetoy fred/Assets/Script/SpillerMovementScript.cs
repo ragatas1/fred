@@ -11,6 +11,7 @@ public class SpillerMovementScript : MonoBehaviour
     public Rigidbody rb;
     Vector3 moveDirection;
     public float moveSpeed;
+    public bool hidden;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,20 @@ public class SpillerMovementScript : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;
         rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "hidingspot")
+        {
+            hidden = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "hidingspot")
+        {
+            hidden = false;
+        }
     }
 }

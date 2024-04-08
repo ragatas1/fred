@@ -12,11 +12,13 @@ public class SpillerMovementScript : MonoBehaviour
     Vector3 moveDirection;
     public float moveSpeed;
     public bool hidden;
+    public GameObject vignette;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hidden = false;
+        vignette.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class SpillerMovementScript : MonoBehaviour
         if (other.gameObject.tag == "hidingspot")
         {
             hidden = true;
+            vignette.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -40,6 +43,7 @@ public class SpillerMovementScript : MonoBehaviour
         if (other.gameObject.tag == "hidingspot")
         {
             hidden = false;
+            vignette.SetActive(false);
         }
     }
 }

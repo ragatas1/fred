@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 1510069300}
   - component: {fileID: 1510069299}
   m_Layer: 0
-  m_Name: NavMesh Modifier Volume
+  m_Name: Safe Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,8 +774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Size: {x: 4, y: 3, z: 4}
   m_Center: {x: 0, y: 1, z: 0}
-  m_Area: 0
-  m_AffectedAgents: ffffffff
+  m_Area: 1
+  m_AffectedAgents: 00000000
 --- !u!4 &1510069300
 Transform:
   m_ObjectHideFlags: 0
@@ -852,6 +852,7 @@ MonoBehaviour:
   rb: {fileID: 1630568447}
   moveSpeed: 400
   hidden: 0
+  vignette: {fileID: 0}
 --- !u!4 &1630568449
 Transform:
   m_ObjectHideFlags: 0

@@ -53,7 +53,7 @@ public class ForelderAI : MonoBehaviour
         {
             //Pause a random amount of time before going to the first point
             if (_index == 1)
-                yield return new WaitForSeconds(Random.Range(3f, 6f));
+                yield return new WaitForSeconds(Random.Range(6f, 9f));
 
             currentTarget = waypoints[_index];
         }

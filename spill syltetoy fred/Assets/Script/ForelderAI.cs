@@ -10,6 +10,7 @@ public class ForelderAI : MonoBehaviour
     private int _index = 1;
     public float upperRandom;
     public float lowerRandom;
+    public int phase;
 
     private NavMeshAgent _agent;
     private Animator _animator;
@@ -18,11 +19,19 @@ public class ForelderAI : MonoBehaviour
     private bool _atEnd = false;
     private bool _moving = true;
 
+    GameObject spiller;
+    SpillerMovementScript spillerscript;
+    GameObject susObjekt;
+    Transform susWaypoint;
+    bool sus;
+
     //https://bergstrand-niklas.medium.com/simple-waypoint-system-in-unity-f3ef3665d636
     //linken jeg brukte^^
 
     void Start()
     {
+        spiller = GameObject.FindGameObjectWithTag("spiller");
+        spillerscript = spiller.GetComponent<SpillerMovementScript>();
        _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
 
@@ -41,6 +50,7 @@ public class ForelderAI : MonoBehaviour
             //Start moving the ai(agent) towards the first target
             _agent.SetDestination(currentTarget.position);
         }
+        sus = true;
     }
 
     IEnumerator MoveToNextWaypoint()
@@ -92,15 +102,32 @@ public class ForelderAI : MonoBehaviour
         //get current speed percent of AI(agent) and set the speed parameter of the animator
         float speedPercent = _agent.velocity.magnitude / _agent.speed;
         _animator.SetFloat("speed", speedPercent);
-
-        if (currentTarget != null)
+        if (phase == 0)
         {
-            //Check if the AI(agent) has arrived the target position
-            if ((Vector3.Distance(transform.position, currentTarget.position) <= 2f) && _moving)
+            if (currentTarget != null)
             {
-                //Set moving to false to prevent this if statment from constantly running while at target position
-                _moving = false;
-                StartCoroutine("MoveToNextWaypoint");
+                //Check if the AI(agent) has arrived the target position
+                if ((Vector3.Distance(transform.position, currentTarget.position) <= 2f) && _moving)
+                {
+                    //Set moving to false to prevent this if statment from constantly running while at target position
+                    _moving = false;
+                    StartCoroutine("MoveToNextWaypoint");
+                }
+            }
+        }
+        else if (phase == 1)
+        {
+            if (!sus)
+            {
+                StopAllCoroutines();
+                spillerscript.SusDrop();
+                susObjekt = GameObject.FindGameObjectWithTag("sus");
+                susWaypoint = susObjekt.GetComponent<Transform>();
+                sus = true;
+            }
+            else
+            {
+                currentTarget = susWaypoint;
             }
         }
     }

@@ -25,7 +25,7 @@ public class SpillerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SusDrop();
         }
@@ -51,7 +51,7 @@ public class SpillerMovementScript : MonoBehaviour
             vignette.SetActive(false);
         }
     }
-    void SusDrop()
+    public void SusDrop()
     {
         Instantiate(sus, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
     }

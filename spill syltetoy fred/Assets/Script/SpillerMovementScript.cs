@@ -13,6 +13,7 @@ public class SpillerMovementScript : MonoBehaviour
     public float moveSpeed;
     public bool hidden;
     public GameObject vignette;
+    public GameObject sus;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,10 @@ public class SpillerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SusDrop();
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;
@@ -45,5 +50,9 @@ public class SpillerMovementScript : MonoBehaviour
             hidden = false;
             vignette.SetActive(false);
         }
+    }
+    void SusDrop()
+    {
+        Instantiate(sus, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
     }
 }

@@ -14,7 +14,7 @@ public class ForelderAI : MonoBehaviour
 
     private bool _inReverse = false;
     private bool _atEnd = false;
-    private bool _movving = true;
+    private bool _moving = true;
 
     //https://bergstrand-niklas.medium.com/simple-waypoint-system-in-unity-f3ef3665d636
     //linken jeg brukte^^
@@ -87,6 +87,19 @@ public class ForelderAI : MonoBehaviour
 
     void Update()
     {
-        
+        //get current speed percent of AI(agent) and set the speed parameter of the animator
+        float speedPercent = _agent.velocity.magnitude / _agent.speed;
+        _animator.SetFloat("speed", speedPercent);
+
+        if (currentTarget != null)
+        {
+            //Check if the AI(agent) has arrived the target position
+            if ((Vector3.Distance(transform.position, currentTarget.position) <= 2f) && _moving)
+            {
+                //Set moving to false to prevent this if statment from constantly running while at target position
+                _moving = false;
+                StartCoroutine("MoveToNextWaypoint");
+            }
+        }
     }
 }

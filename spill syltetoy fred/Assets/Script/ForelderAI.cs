@@ -100,8 +100,9 @@ public class ForelderAI : MonoBehaviour
     void Update()
     {
         //get current speed percent of AI(agent) and set the speed parameter of the animator
-        float speedPercent = _agent.velocity.magnitude / _agent.speed;
-        _animator.SetFloat("speed", speedPercent);
+        float v = _agent.velocity.magnitude / _agent.speed;
+        float speedPercent = v;
+        _animator.SetFloat("Speed", speedPercent);
         if (phase == 0)
         {
             if (currentTarget != null)

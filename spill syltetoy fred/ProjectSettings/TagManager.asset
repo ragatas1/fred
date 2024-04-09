@@ -8,6 +8,8 @@ TagManager:
   - sus
   - spiller
   - syn
+  - CinemachineTarget
+  - Gameboy
   layers:
   - Default
   - TransparentFX

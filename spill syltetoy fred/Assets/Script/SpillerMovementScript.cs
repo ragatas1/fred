@@ -7,6 +7,7 @@ public class SpillerMovementScript : MonoBehaviour
 {
     float horizontal;
     float vertical;
+    public GameObject objekt;
     public Transform orientation;
     public Rigidbody rb;
     Vector3 moveDirection;
@@ -33,6 +34,14 @@ public class SpillerMovementScript : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;
         rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
+        if (hidden)
+        {
+            objekt.layer = 8;
+        }
+        else
+        {
+            objekt.layer = 6;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

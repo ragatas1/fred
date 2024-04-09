@@ -19,19 +19,12 @@ public class ForelderAI : MonoBehaviour
     private bool _atEnd = false;
     private bool _moving = true;
 
-    GameObject spiller;
-    SpillerMovementScript spillerscript;
-    GameObject susObjekt;
-    Transform susWaypoint;
-    bool sus;
 
     //https://bergstrand-niklas.medium.com/simple-waypoint-system-in-unity-f3ef3665d636
     //linken jeg brukte^^
 
     void Start()
     {
-        spiller = GameObject.FindGameObjectWithTag("spiller");
-        spillerscript = spiller.GetComponent<SpillerMovementScript>();
        _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
 
@@ -50,7 +43,6 @@ public class ForelderAI : MonoBehaviour
             //Start moving the ai(agent) towards the first target
             _agent.SetDestination(currentTarget.position);
         }
-        sus = true;
     }
 
     IEnumerator MoveToNextWaypoint()
@@ -103,8 +95,6 @@ public class ForelderAI : MonoBehaviour
         float v = _agent.velocity.magnitude / _agent.speed;
         float speedPercent = v;
         _animator.SetFloat("Speed", speedPercent);
-        if (phase == 0)
-        {
             if (currentTarget != null)
             {
                 //Check if the AI(agent) has arrived the target position
@@ -115,21 +105,7 @@ public class ForelderAI : MonoBehaviour
                     StartCoroutine("MoveToNextWaypoint");
                 }
             }
-        }
-        else if (phase == 1)
-        {
-            if (!sus)
-            {
-                StopAllCoroutines();
-                spillerscript.SusDrop();
-                susObjekt = GameObject.FindGameObjectWithTag("sus");
-                susWaypoint = susObjekt.GetComponent<Transform>();
-                sus = true;
-            }
-            else
-            {
-                currentTarget = susWaypoint;
-            }
-        }
+        
+        
     }
 }

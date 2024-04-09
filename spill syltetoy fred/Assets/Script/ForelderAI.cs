@@ -8,6 +8,8 @@ public class ForelderAI : MonoBehaviour
     public List<Transform> waypoints;
     Transform currentTarget;
     private int _index = 1;
+    public float upperRandom;
+    public float lowerRandom;
 
     private NavMeshAgent _agent;
     private Animator _animator;
@@ -53,7 +55,7 @@ public class ForelderAI : MonoBehaviour
         {
             //Pause a random amount of time before going to the first point
             if (_index == 1)
-                yield return new WaitForSeconds(Random.Range(6f, 9f));
+                yield return new WaitForSeconds(Random.Range(lowerRandom, upperRandom));
 
             currentTarget = waypoints[_index];
         }

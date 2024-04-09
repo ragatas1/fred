@@ -42,6 +42,10 @@ public class SpillerMovementScript : MonoBehaviour
             hidden = true;
             vignette.SetActive(true);
         }
+        if (other.gameObject.tag == "syn")
+        {
+            Debug.Log("sett");
+        }
     }
     private void OnTriggerExit(Collider other)
     {

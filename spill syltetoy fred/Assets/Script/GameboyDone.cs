@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameboyDone : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameboyDone : MonoBehaviour
             {
                 if (Input.GetButtonDown("Interact"))
                 {
-                    
+                    SceneManager.LoadScene("WinScreen");
                 }
             }
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VisionCone2 : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class VisionCone2 : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position,dirToTarget,dstToTarget,obstacleMask))
                 {
-                    Debug.Log("sett");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
             }
         }

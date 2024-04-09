@@ -8,12 +8,16 @@ public class KameraScript : MonoBehaviour
     public float sensY;
 
     public Transform orientation;
+    public Transform holder;
 
     float xRotation;
     float yRotation;
     bool mus;
     float mouseX;
     float mouseY;
+    float lean;
+    public float leanIntenisty;
+    public float leanRotate;
 
 
     // Start is called before the first frame update
@@ -26,7 +30,7 @@ public class KameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        lean = Input.GetAxis("lean");
         if (Input.GetAxis("joy x")+Input.GetAxis("joy y") != 0)
         {
             mus = false;
@@ -35,7 +39,9 @@ public class KameraScript : MonoBehaviour
         {
             mus = true;
         }
-        transform.position = orientation.position;
+        holder.position = orientation.position;
+        transform.localPosition = new Vector3(lean*leanIntenisty,0,0);
+        transform.localRotation = Quaternion.Euler(0,0,lean*-leanRotate);
         if (!mus)
         {
             mouseX = Input.GetAxisRaw("joy x") * Time.deltaTime * sensX;
@@ -51,7 +57,7 @@ public class KameraScript : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        holder.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 }

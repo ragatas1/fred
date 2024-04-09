@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BaneTilPrototype.unity
     guid: 766a77c6778635646b783f9d6b1d2f68
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: fc66cbda65cc31a4a8fbffaf1a4f1b1a
   m_configObjects: {}

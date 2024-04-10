@@ -7,9 +7,13 @@ public class SpillerPickup : MonoBehaviour
     public bool HarGameboy;
     public bool GameBoyPlukkOpp;
     public GameObject Gameboy;
+    public GameObject txt;
+    public GameObject txt2;
+    public float ventetid;
     void Start()
     {
         HarGameboy = false;
+        txt.SetActive(false);
     }
 
     void Update()
@@ -20,6 +24,7 @@ public class SpillerPickup : MonoBehaviour
             {
                 HarGameboy = true;
                 Gameboy.SetActive(false);
+                StartCoroutine(text());
             }
         }
     }
@@ -29,6 +34,7 @@ public class SpillerPickup : MonoBehaviour
         if (other.tag == "Gameboy")
         { 
             GameBoyPlukkOpp = true; 
+            txt.SetActive(true);
         }
     }
 
@@ -37,6 +43,14 @@ public class SpillerPickup : MonoBehaviour
         if (other.tag == "Gameboy") 
         {  
             GameBoyPlukkOpp = false; 
+            txt.SetActive(false);
         }
+    }
+    IEnumerator text()
+    {
+        txt.SetActive(false);
+        txt2.SetActive(true);
+        yield return new WaitForSeconds(ventetid);
+        txt2.SetActive(false);
     }
 }

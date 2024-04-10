@@ -7,10 +7,11 @@ public class GameboyDone : MonoBehaviour
 {
     public bool iSenga;
     public SpillerPickup Gaeboy;
+    public GameObject txt;
    
     void Start()
     {
-        
+        txt.SetActive(false);
     }
 
   
@@ -20,10 +21,15 @@ public class GameboyDone : MonoBehaviour
         {
             if(Gaeboy.HarGameboy == true)
             {
+                txt.SetActive(true);
                 if (Input.GetButtonDown("Interact"))
                 {
                     SceneManager.LoadScene("WinScreen");
                 }
+            }
+            else
+            {
+                txt.SetActive(false);
             }
         }
     }

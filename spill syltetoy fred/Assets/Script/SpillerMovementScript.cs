@@ -15,12 +15,15 @@ public class SpillerMovementScript : MonoBehaviour
     public bool hidden;
     public GameObject vignette;
     public GameObject sus;
+    public float ventetid;
+    public GameObject txt1;
 
     // Start is called before the first frame update
     void Start()
     {
         hidden = false;
         vignette.SetActive(false);
+        StartCoroutine(starting());
     }
 
     // Update is called once per frame
@@ -68,5 +71,11 @@ public class SpillerMovementScript : MonoBehaviour
     public void SusDrop()
     {
         Instantiate(sus, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
+    }
+    IEnumerator starting()
+    {
+        txt1.SetActive(true);
+        yield return new WaitForSeconds(ventetid);
+        txt1.SetActive(false);
     }
 }

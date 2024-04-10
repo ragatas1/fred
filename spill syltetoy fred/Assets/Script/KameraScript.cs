@@ -18,6 +18,7 @@ public class KameraScript : MonoBehaviour
     float lean;
     public float leanIntenisty;
     public float leanRotate;
+    public AudioSource musik;
 
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class KameraScript : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+        musik.Play();
     }
 
     // Update is called once per frame

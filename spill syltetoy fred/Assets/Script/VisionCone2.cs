@@ -8,6 +8,8 @@ public class VisionCone2 : MonoBehaviour
 {
     public float viewRadius;
     public float viewAngle;
+    public float ventetid;
+    public GameObject txt;
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
@@ -26,7 +28,7 @@ public class VisionCone2 : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position,dirToTarget,dstToTarget,obstacleMask))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    StartCoroutine(dod());
                 }
             }
         }
@@ -47,6 +49,12 @@ public class VisionCone2 : MonoBehaviour
             yield return new WaitForSeconds(delay);
             FindVisibleTargets();
         }
+    }
+    IEnumerator dod()
+    {
+        txt.SetActive(true);
+        yield return new WaitForSeconds(ventetid);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

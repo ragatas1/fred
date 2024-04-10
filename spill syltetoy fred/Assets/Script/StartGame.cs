@@ -12,4 +12,9 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    private void Start()
+    {
+        Cursor.visible = true;
+
+    }
 }

@@ -10,10 +10,12 @@ public class VisionCone2 : MonoBehaviour
     public float viewAngle;
     public float ventetid;
     public GameObject txt;
+    public PhaseManager phaseManager;
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-
+    [HideInInspector] public bool ser;
+    
     void FindVisibleTargets()
     {
         Collider[] targetsInViewRadius = Physics.OverlapSphere (transform.position, viewRadius, targetMask);
@@ -29,6 +31,7 @@ public class VisionCone2 : MonoBehaviour
                 if (!Physics.Raycast(transform.position,dirToTarget,dstToTarget,obstacleMask))
                 {
                     StartCoroutine(dod());
+                    ser = true;
                 }
             }
         }
@@ -53,8 +56,9 @@ public class VisionCone2 : MonoBehaviour
     IEnumerator dod()
     {
         txt.SetActive(true);
+        phaseManager.phase = 3;
         yield return new WaitForSeconds(ventetid);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        txt.SetActive(false);
     }
 
 }

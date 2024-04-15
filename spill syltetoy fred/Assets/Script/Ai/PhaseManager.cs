@@ -21,6 +21,7 @@ public class PhaseManager : MonoBehaviour
     {
         if (phase == 1)  { phase1.enabled = true; }
         else { phase1.enabled = false; }
+        //phase 1 er patruljeringsfasen
 
         if (phase == 2) { phase2.enabled = true; }
         else { phase2.enabled = false; }

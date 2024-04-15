@@ -35,6 +35,7 @@ public class SusScript : MonoBehaviour
         if ((Vector3.Distance(transform.position, susObjekt.transform.position) <= 2f))
         {
             Destroy(susObjekt);
+            phaseManager.phase = 1;
         }
 
     }

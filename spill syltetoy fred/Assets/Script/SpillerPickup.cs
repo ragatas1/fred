@@ -25,6 +25,7 @@ public class SpillerPickup : MonoBehaviour
             {
                 HarGameboy = true;
                 Gameboy.SetActive(false);
+                GameBoyPlukkOpp = false;
                 StartCoroutine(text());
             }
         }

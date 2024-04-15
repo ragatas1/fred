@@ -9,6 +9,9 @@ public class ChaseScript : MonoBehaviour
     private NavMeshAgent agent;
     GameObject spiller;
     PhaseManager phaseManager;
+    public VisionCone2 vision;
+    public float sinnaTid;
+    float tid;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,17 @@ public class ChaseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( vision.ser == true)
+        {
+            tid = 0;
+            vision.ser = false;
+        }
+        tid = tid + 1*Time.deltaTime;
+        if ( tid > sinnaTid )
+        {
+            phaseManager.phase = 2;
+        }
+
         agent.destination = spiller.transform.position;
         if ((Vector3.Distance(transform.position, spiller.transform.position) <= 2f))
         {

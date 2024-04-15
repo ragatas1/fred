@@ -33,11 +33,11 @@ public class SpillerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-            //SusDrop();
-        //}
-        //Trengte ikke disse midlertidlig ^^^^ så de er sånn her
+      /*  if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SusDrop();
+        }
+      */
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;

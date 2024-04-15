@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ForelderAI : MonoBehaviour
+public class PatrolScript : MonoBehaviour
 {
     public List<Transform> waypoints;
     Transform currentTarget;
     private int _index = 1;
     public float upperRandom;
     public float lowerRandom;
-    public int phase;
 
     private NavMeshAgent _agent;
     private Animator _animator;
@@ -18,6 +17,7 @@ public class ForelderAI : MonoBehaviour
     private bool _inReverse = false;
     private bool _atEnd = false;
     private bool _moving = true;
+    PhaseManager phaseManager;
 
 
     //https://bergstrand-niklas.medium.com/simple-waypoint-system-in-unity-f3ef3665d636
@@ -25,7 +25,8 @@ public class ForelderAI : MonoBehaviour
 
     void Start()
     {
-       _agent = GetComponent<NavMeshAgent>();
+        phaseManager = GetComponent<PhaseManager>();
+        _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
 
         if (_agent != null)

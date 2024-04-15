@@ -16,10 +16,18 @@ public class GameboySpawner : MonoBehaviour
 
     void SpawnObjectRandomly()
     {
-        int randomNumber = Random.Range(0, 2);
-
-        Vector3 spawnPosition = randomNumber == 0 ? location1.position : location2.position;
         
-        Instantiate(Gameboy, spawnPosition, Quaternion.identity);
+        int randomNumber = Random.Range(0, 2); 
+
+    
+        Transform chosenLocation = randomNumber == 0 ? location1 : location2;
+
+     
+        Vector3 spawnPosition = chosenLocation.position;
+
+        
+        Quaternion spawnRotation = chosenLocation.rotation;
+
+        Instantiate(Gameboy, spawnPosition, spawnRotation);
     }
 }

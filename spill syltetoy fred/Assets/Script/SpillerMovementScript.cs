@@ -16,7 +16,6 @@ public class SpillerMovementScript : MonoBehaviour
     public float hoppeKraft;
     public bool hidden;
     public bool kanHoppe;
-    bool paBakken;
     public GameObject vignette;
     public GameObject sus;
     public float ventetid;
@@ -51,7 +50,7 @@ public class SpillerMovementScript : MonoBehaviour
         {
             objekt.layer = 6;
         }
-        if (!kanHoppe && !paBakken)
+        if (kanHoppe && grounded)
         {
             if (Input.GetButtonDown("Interact"))
             {

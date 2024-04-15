@@ -10,6 +10,8 @@ public class KameraScript : MonoBehaviour
     public Transform orientation;
     public Transform holder;
 
+    public TriggerScript right;
+    public TriggerScript left;
     float xRotation;
     float yRotation;
     bool mus;
@@ -42,8 +44,13 @@ public class KameraScript : MonoBehaviour
             mus = true;
         }
         holder.position = orientation.position;
-        transform.localPosition = new Vector3(lean*leanIntenisty,0,0);
-        transform.localRotation = Quaternion.Euler(0,0,lean*-leanRotate);
+        if (left.triggered && lean < 0) { }
+        else if (right.triggered && lean > 0) { }
+        else
+        {
+            transform.localPosition = new Vector3(lean * leanIntenisty, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, lean * -leanRotate);
+        }
         if (!mus)
         {
             mouseX = Input.GetAxisRaw("joy x") * Time.deltaTime * sensX;

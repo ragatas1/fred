@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: vignette
       value: 
       objectReference: {fileID: 132608809}
+    - target: {fileID: 9171309117094843801, guid: a2366fde9b5fe6f428363d07438034be, type: 3}
+      propertyPath: hoppeKraft
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1785,7 +1789,7 @@ GameObject:
   - component: {fileID: 1281784626}
   m_Layer: 0
   m_Name: Hyller
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1870,7 +1874,7 @@ Transform:
   m_GameObject: {fileID: 1281784625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.03, y: -1.082, z: -1.06}
+  m_LocalPosition: {x: -2.03, y: -1.47, z: -1.06}
   m_LocalScale: {x: 1, y: 1.4726, z: 1.6535}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3101,7 +3105,7 @@ GameObject:
   - component: {fileID: 1994271439}
   m_Layer: 0
   m_Name: SkoHylle
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3311,7 +3315,7 @@ GameObject:
   - component: {fileID: 2138597043}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

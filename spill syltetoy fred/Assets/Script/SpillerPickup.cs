@@ -12,6 +12,7 @@ public class SpillerPickup : MonoBehaviour
     public float ventetid;
     void Start()
     {
+        Gameboy = GameObject.FindGameObjectWithTag("Gameboy");
         HarGameboy = false;
         txt.SetActive(false);
     }

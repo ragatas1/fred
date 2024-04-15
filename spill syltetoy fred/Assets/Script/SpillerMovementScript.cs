@@ -39,7 +39,6 @@ public class SpillerMovementScript : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;
         rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
-        Vector3 pos = transform.position + (moveDirection * moveSpeed);
         //rb.velocity = new Vector3(moveDirection.x*moveSpeed, 0, moveDirection.y*moveSpeed);
         if (hidden)
         {

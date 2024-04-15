@@ -157,7 +157,7 @@ MonoBehaviour:
   objekt: {fileID: 5706594799607734491}
   orientation: {fileID: 5451569757712956432}
   rb: {fileID: 6320707918076099733}
-  moveSpeed: 400
+  moveSpeed: 1000
   hidden: 0
   vignette: {fileID: 0}
   sus: {fileID: 9104369458759077801, guid: 8666af60576563946bc96386d7870674, type: 3}
@@ -172,7 +172,7 @@ Rigidbody:
   m_GameObject: {fileID: 6317722621657900874}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}

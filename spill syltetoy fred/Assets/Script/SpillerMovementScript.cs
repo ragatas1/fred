@@ -13,11 +13,15 @@ public class SpillerMovementScript : MonoBehaviour
     public Rigidbody rb;
     Vector3 moveDirection;
     public float moveSpeed;
+    public float hoppeKraft;
     public bool hidden;
+    public bool kanHoppe;
+    bool paBakken;
     public GameObject vignette;
     public GameObject sus;
     public float ventetid;
     public GameObject txt1;
+    public bool grounded;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +43,6 @@ public class SpillerMovementScript : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * vertical + orientation.right * horizontal;
         rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
-        //rb.velocity = new Vector3(moveDirection.x*moveSpeed, 0, moveDirection.y*moveSpeed);
         if (hidden)
         {
             objekt.layer = 8;
@@ -47,6 +50,27 @@ public class SpillerMovementScript : MonoBehaviour
         else
         {
             objekt.layer = 6;
+        }
+        if (!kanHoppe && !paBakken)
+        {
+            if (Input.GetButtonDown("Interact"))
+            {
+                rb.AddForce(0, hoppeKraft, 0);
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            grounded = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            grounded = false;
         }
     }
 

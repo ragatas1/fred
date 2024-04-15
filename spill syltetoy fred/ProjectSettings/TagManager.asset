@@ -10,6 +10,7 @@ TagManager:
   - syn
   - CinemachineTarget
   - Gameboy
+  - ground
   layers:
   - Default
   - TransparentFX

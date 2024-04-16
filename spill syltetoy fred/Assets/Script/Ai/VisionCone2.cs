@@ -15,6 +15,8 @@ public class VisionCone2 : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
     [HideInInspector] public bool ser;
+    public float timer;
+    public float chasetid;
     
     void FindVisibleTargets()
     {
@@ -30,10 +32,26 @@ public class VisionCone2 : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position,dirToTarget,dstToTarget,obstacleMask))
                 {
-                    StartCoroutine(dod());
                     ser = true;
+                    phaseManager.phase = 2;
                 }
+                else ser = false;
             }
+        }
+    }
+    private void Update()
+    {
+        if (ser)
+        {
+            timer = timer + 1 * Time.deltaTime;
+        }
+        else
+        {
+            timer = 0;
+        }
+        if (timer > chasetid)
+        {
+            StartCoroutine(dod());
         }
     }
     public Vector3 DirFromAngle (float angleinDegrees)

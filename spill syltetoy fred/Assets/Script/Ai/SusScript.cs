@@ -11,21 +11,20 @@ public class SusScript : MonoBehaviour
     public GameObject spillerTing;
     public SpillerMovementScript spiller;
     PhaseManager phaseManager;
-    private void Start()
-    {
-        phaseManager = GetComponent<PhaseManager>();
-        spillerTing = GameObject.FindGameObjectWithTag("spillerParent");
-        if (spillerTing == null)
-        {
-            spillerTing = GameObject.FindGameObjectWithTag("hidden");
-        }
-        spiller = spillerTing.GetComponent<SpillerMovementScript>();
-        agent = GetComponent<NavMeshAgent>();
-    }
+
     private void OnEnable()
     {
+        if (phaseManager == null){phaseManager = GetComponent<PhaseManager>();}
+        if (spillerTing == null) {spillerTing = GameObject.FindGameObjectWithTag("spillerParent");}
+        if (spiller == null) {spiller = spillerTing.GetComponent<SpillerMovementScript>();}
+        if (agent == null) {agent = GetComponent<NavMeshAgent>();}
+
         spiller.SusDrop();
         susObjekt = GameObject.FindGameObjectWithTag("sus");
+    }
+    private void OnDisable()
+    {
+        Destroy(susObjekt);
     }
 
     // Update is called once per frame
@@ -34,7 +33,6 @@ public class SusScript : MonoBehaviour
         agent.destination = susObjekt.transform.position;
         if ((Vector3.Distance(transform.position, susObjekt.transform.position) <= 2f))
         {
-            Destroy(susObjekt);
             phaseManager.phase = 1;
         }
 

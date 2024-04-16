@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PatrolScript : MonoBehaviour
 {
     public List<Transform> waypoints;
-    Transform currentTarget;
+    public Transform currentTarget;
     private int _index = 1;
     public float upperRandom;
     public float lowerRandom;
@@ -44,6 +44,10 @@ public class PatrolScript : MonoBehaviour
             //Start moving the ai(agent) towards the first target
             _agent.SetDestination(currentTarget.position);
         }
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(MoveToNextWaypoint());
     }
 
     IEnumerator MoveToNextWaypoint()

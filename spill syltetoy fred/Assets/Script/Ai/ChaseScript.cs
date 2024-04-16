@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class ChaseScript : MonoBehaviour
 {
@@ -30,9 +31,11 @@ public class ChaseScript : MonoBehaviour
         if ( vision.ser == true)
         {
             tid = 0;
-            vision.ser = false;
         }
-        tid = tid + 1*Time.deltaTime;
+        else
+        {
+            tid = tid + 1 * Time.deltaTime;
+        }
         if ( tid > sinnaTid )
         {
             phaseManager.phase = 2;
@@ -42,9 +45,9 @@ public class ChaseScript : MonoBehaviour
             agent.destination = spiller.transform.position;
         }
 
-        if ((Vector3.Distance(transform.position, spiller.transform.position) <= 2f))
+        if ((Vector3.Distance(transform.position, spiller.transform.position) <= 1f))
         {
-
+            SceneManager.LoadScene("fanget");
         }
 
     }

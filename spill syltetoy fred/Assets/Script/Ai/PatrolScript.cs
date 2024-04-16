@@ -28,13 +28,13 @@ public class PatrolScript : MonoBehaviour
         phaseManager = GetComponent<PhaseManager>();
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-
+        /*
         if (_agent != null)
             Debug.LogError("NavMeshAgent missing");
 
         if (_animator != null)
             Debug.LogError("Animator Missing");
-
+        */
         //If there are waypoints and the first waypoint is not null
         if (waypoints.Count > 0 && waypoints[0] != null)
         {
@@ -99,7 +99,7 @@ public class PatrolScript : MonoBehaviour
         //get current speed percent of AI(agent) and set the speed parameter of the animator
         float v = _agent.velocity.magnitude / _agent.speed;
         float speedPercent = v;
-        _animator.SetFloat("Speed", speedPercent);
+        //_animator.SetFloat("Speed", speedPercent);
             if (currentTarget != null)
             {
                 //Check if the AI(agent) has arrived the target position

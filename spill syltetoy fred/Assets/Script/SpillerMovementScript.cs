@@ -96,7 +96,6 @@ public class SpillerMovementScript : MonoBehaviour
     public void SusDrop()
     {
         Instantiate(sus, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
-        Debug.Log("sus dropped");
     }
     IEnumerator starting()
     {

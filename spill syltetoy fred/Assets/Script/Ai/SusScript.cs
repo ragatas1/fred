@@ -14,18 +14,18 @@ public class SusScript : MonoBehaviour
     private void Start()
     {
         phaseManager = GetComponent<PhaseManager>();
-    }
-    private void Awake()
-    {
         spillerTing = GameObject.FindGameObjectWithTag("spillerParent");
         if (spillerTing == null)
         {
             spillerTing = GameObject.FindGameObjectWithTag("hidden");
         }
         spiller = spillerTing.GetComponent<SpillerMovementScript>();
+        agent = GetComponent<NavMeshAgent>();
+    }
+    private void OnEnable()
+    {
         spiller.SusDrop();
         susObjekt = GameObject.FindGameObjectWithTag("sus");
-        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame

@@ -37,8 +37,11 @@ public class ChaseScript : MonoBehaviour
         {
             phaseManager.phase = 2;
         }
+        else
+        {
+            agent.destination = spiller.transform.position;
+        }
 
-        agent.destination = spiller.transform.position;
         if ((Vector3.Distance(transform.position, spiller.transform.position) <= 2f))
         {
 

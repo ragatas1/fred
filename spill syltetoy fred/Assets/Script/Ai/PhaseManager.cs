@@ -9,6 +9,7 @@ public class PhaseManager : MonoBehaviour
     PatrolScript phase1;
     SusScript phase2;
     ChaseScript phase3;
+    LookAroundScript phase4;
     public float speed;
     public float chasespeed;
     NavMeshAgent navMeshAgent;
@@ -20,6 +21,8 @@ public class PhaseManager : MonoBehaviour
         phase1 = GetComponent<PatrolScript>();
         phase2 = GetComponent<SusScript>();
         phase3 = GetComponent<ChaseScript>();
+        phase4 = GetComponent<LookAroundScript>();
+
     }
 
     // Update is called once per frame
@@ -49,5 +52,13 @@ public class PhaseManager : MonoBehaviour
         }
         else { phase3.enabled = false; }
         //phase 3 er chasefasen
+
+        if (phase == 4)
+        {
+            phase4.enabled = true; Debug.Log("fase4");
+            navMeshAgent.speed = speed;
+        }
+        else { phase4.enabled = false; }
+        //phase 3 se seg rundt fasen
     }
 }

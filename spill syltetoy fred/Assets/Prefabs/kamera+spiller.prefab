@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171309117094843801, guid: a2366fde9b5fe6f428363d07438034be, type: 3}
       propertyPath: kanHoppe
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

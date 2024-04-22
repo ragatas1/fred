@@ -6,8 +6,8 @@ using UnityEngine.InputSystem.XR;
 
 public class SpillerMovementScript : MonoBehaviour
 {
-    float horizontal;
-    float vertical;
+    public float horizontal;
+    public float vertical;
     public GameObject objekt;
     public Transform orientation;
     public Rigidbody rb;
@@ -40,7 +40,7 @@ public class SpillerMovementScript : MonoBehaviour
       */
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        moveDirection = orientation.forward * vertical + orientation.right * horizontal;
+        moveDirection = orientation.forward * -vertical + orientation.right * horizontal;
         rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
         if (hidden)
         {

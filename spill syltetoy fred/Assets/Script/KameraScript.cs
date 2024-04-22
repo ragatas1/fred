@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class KameraScript : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    float sensX;
+    float sensY;
+    public float sensXJoy;
+    public float sensYJoy;
+    public float sensXMus;
+    public float sensYMus;
 
     public Transform orientation;
     public Transform holder;
@@ -38,10 +42,14 @@ public class KameraScript : MonoBehaviour
         if (Input.GetAxis("joy x")+Input.GetAxis("joy y") != 0)
         {
             mus = false;
+            sensX = sensXJoy;
+            sensY = sensYJoy;
         }
         else
         {
             mus = true;
+            sensX = sensXMus;
+            sensY = sensYMus;
         }
         holder.position = orientation.position;
         if (left.triggered && lean < 0) { }

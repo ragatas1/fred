@@ -38,7 +38,7 @@ public class ChaseScript : MonoBehaviour
         }
         if ( tid > sinnaTid )
         {
-            phaseManager.phase = 2;
+            phaseManager.phase = 4;
         }
         else
         {

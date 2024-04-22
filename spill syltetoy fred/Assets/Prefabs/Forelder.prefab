@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 816081991988577399}
   - component: {fileID: 2787500590579990462}
   - component: {fileID: 7791758227988165057}
+  - component: {fileID: 7089687426234184207}
   m_Layer: 0
   m_Name: Forelder
   m_TagString: Untagged
@@ -196,8 +197,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2589361575781651478}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67, type: 3}
+  m_Controller: {fileID: 9100000, guid: b493467361c372f4fb1bfe063d2fea54, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -221,6 +222,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 1
+  speed: 1
+  chasespeed: 2
+--- !u!114 &7089687426234184207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589361575781651478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3e0fdef3c1d694a9cc6b718509329a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRange: 3
+  ventetid: 3
 --- !u!1 &4168714512932125983
 GameObject:
   m_ObjectHideFlags: 0

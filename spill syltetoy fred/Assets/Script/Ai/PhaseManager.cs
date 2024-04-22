@@ -59,6 +59,6 @@ public class PhaseManager : MonoBehaviour
             navMeshAgent.speed = speed;
         }
         else { phase4.enabled = false; }
-        //phase 3 se seg rundt fasen
+        //phase 4 er se seg rundt fasen
     }
 }

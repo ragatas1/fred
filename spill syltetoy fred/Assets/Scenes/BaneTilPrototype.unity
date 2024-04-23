@@ -3668,10 +3668,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forelder
       objectReference: {fileID: 0}
-    - target: {fileID: 2589361575781651478, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4004941864290887899, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: txt
       value: 
@@ -7199,22 +7195,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
-      propertyPath: sensXJoy
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
-      propertyPath: sensXMus
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
-      propertyPath: sensYJoy
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
-      propertyPath: sensYMus
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 4075545124743196470, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_Name
       value: kamera+spiller
@@ -7271,10 +7251,6 @@ PrefabInstance:
       propertyPath: txt1
       value: 
       objectReference: {fileID: 687871614}
-    - target: {fileID: 7864276851650467547, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
-      propertyPath: kanHoppe
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7864276851650467547, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: vignette
       value: 

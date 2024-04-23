@@ -435,8 +435,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae96026977c3b1044947a88c90bf4e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 500
-  sensY: 500
+  sensXJoy: 300
+  sensYJoy: 300
+  sensXMus: 500
+  sensYMus: 500
   orientation: {fileID: 6468104621540212562}
   holder: {fileID: 7563715311228297557}
   right: {fileID: 7771322113476109841}
@@ -502,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171309117094843801, guid: a2366fde9b5fe6f428363d07438034be, type: 3}
       propertyPath: kanHoppe
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

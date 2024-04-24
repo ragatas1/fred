@@ -8,8 +8,8 @@ public class SusScript : MonoBehaviour
 {
     GameObject susObjekt;
     NavMeshAgent agent;
-    public GameObject spillerTing;
-    public SpillerMovementScript spiller;
+    GameObject spillerTing;
+    SpillerMovementScript spiller;
     PhaseManager phaseManager;
 
     private void OnEnable()

@@ -10,8 +10,10 @@ public class PhaseManager : MonoBehaviour
     SusScript phase2;
     ChaseScript phase3;
     LookAroundScript phase4;
+    AlwaysChaseScript phase5;
     public float speed;
-    public float chasespeed;
+    public float chaseSpeed;
+    public float alwaysChaseSpeed;
     NavMeshAgent navMeshAgent;
 
     // Start is called before the first frame update
@@ -30,7 +32,7 @@ public class PhaseManager : MonoBehaviour
     {
         if (phase == 1)  
         {
-            phase1.enabled = true; Debug.Log("fase1");
+            phase1.enabled = true;
             navMeshAgent.speed = speed;
         }
         else { phase1.enabled = false; }
@@ -39,7 +41,7 @@ public class PhaseManager : MonoBehaviour
 
         if (phase == 2) 
         {
-            phase2.enabled = true; Debug.Log("fase2");
+            phase2.enabled = true;
             navMeshAgent.speed = speed;
         }
         else { phase2.enabled = false; }
@@ -47,18 +49,23 @@ public class PhaseManager : MonoBehaviour
 
         if (phase == 3) 
         {
-            phase3.enabled = true; Debug.Log("fase3");
-            navMeshAgent.speed = chasespeed;
+            phase3.enabled = true; 
+            navMeshAgent.speed = chaseSpeed;
         }
         else { phase3.enabled = false; }
         //phase 3 er chasefasen
 
         if (phase == 4)
         {
-            phase4.enabled = true; Debug.Log("fase4");
+            phase4.enabled = true; 
             navMeshAgent.speed = speed;
         }
         else { phase4.enabled = false; }
         //phase 4 er se seg rundt fasen
+        if (phase == 5)
+        {
+            phase5.enabled = true; 
+            navMeshAgent.speed = alwaysChaseSpeed;
+        }
     }
 }

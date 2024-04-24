@@ -301,7 +301,7 @@ MonoBehaviour:
   VisionAngle: 90
   VisionObstructingLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 439
   VisionConeResolution: 120
 --- !u!114 &4004941864290887899
 MonoBehaviour:
@@ -379,7 +379,7 @@ MonoBehaviour:
   VisionAngle: 360
   VisionObstructingLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 439
   VisionConeResolution: 120
 --- !u!114 &4094785243699899173
 MonoBehaviour:

@@ -2143,6 +2143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: kamera+spiller
       objectReference: {fileID: 0}
+    - target: {fileID: 4075545124743196470, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4377578966760234335, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: txt
       value: 
@@ -8459,6 +8463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forelder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4004941864290887899, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
+      propertyPath: txt
+      value: 
+      objectReference: {fileID: 2027482513}
+    - target: {fileID: 4094785243699899173, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
+      propertyPath: txt
+      value: 
+      objectReference: {fileID: 2027482513}
     - target: {fileID: 4118142073228373538, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: waypoints.Array.size
       value: 3
@@ -8490,6 +8502,14 @@ PrefabInstance:
     - target: {fileID: 7089687426234184207, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791758227988165057, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
+      propertyPath: chaseSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791758227988165057, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
+      propertyPath: alwaysChaseSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8736054108901340909, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: VisionConeMaterial

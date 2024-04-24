@@ -24,6 +24,7 @@ public class PhaseManager : MonoBehaviour
         phase2 = GetComponent<SusScript>();
         phase3 = GetComponent<ChaseScript>();
         phase4 = GetComponent<LookAroundScript>();
+        phase5 = GetComponent<AlwaysChaseScript>();
 
     }
 
@@ -66,6 +67,10 @@ public class PhaseManager : MonoBehaviour
         {
             phase5.enabled = true; 
             navMeshAgent.speed = alwaysChaseSpeed;
+        }
+        else
+        {
+            phase5.enabled = false;
         }
     }
 }

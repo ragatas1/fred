@@ -6,7 +6,7 @@ public class SpillerPickup : MonoBehaviour
 {
     public bool HarGameboy;
     public bool GameBoyPlukkOpp;
-    public GameObject Gameboy;
+    GameObject Gameboy;
     public GameObject txt;
     public GameObject txt2;
     public float ventetid;

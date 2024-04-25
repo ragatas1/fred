@@ -11,6 +11,7 @@ public class SusScript : MonoBehaviour
     GameObject spillerTing;
     SpillerMovementScript spiller;
     PhaseManager phaseManager;
+    public float giOppTid;
 
     private void OnEnable()
     {
@@ -21,6 +22,7 @@ public class SusScript : MonoBehaviour
 
         spiller.SusDrop();
         susObjekt = GameObject.FindGameObjectWithTag("sus");
+        StartCoroutine(giOpp());
     }
     private void OnDisable()
     {
@@ -36,5 +38,10 @@ public class SusScript : MonoBehaviour
             phaseManager.phase = 1;
         }
 
+    }
+    IEnumerator giOpp()
+    {
+        yield return new WaitForSeconds(giOppTid);
+        phaseManager.phase = 1;
     }
 }

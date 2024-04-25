@@ -10,6 +10,7 @@ public class DorApneScript : MonoBehaviour
     public SpillerPickup spiller;
     bool vedDor;
     public BoxCollider box;
+    public GameObject txt;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,13 @@ public class DorApneScript : MonoBehaviour
             {
                 door.OpenDoor();
                 box.enabled = false;
+                spiller.HarGameboy = false;
             }
+            txt.SetActive(true);
+        }
+        else
+        {
+            txt.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -33,7 +33,6 @@ public class VisionCone2 : MonoBehaviour
                 if (!Physics.Raycast(transform.position,dirToTarget,dstToTarget,obstacleMask))
                 {
                     ser = true;
-                    phaseManager.phase = 2;
                 }
                 else ser = false;
             }
@@ -44,15 +43,23 @@ public class VisionCone2 : MonoBehaviour
         if (ser)
         {
             timer = timer + 1 * Time.deltaTime;
+            if (timer > chasetid)
+            {
+                if (phaseManager.phase != 3)
+                {
+                    StartCoroutine(dod());
+                }
+            }
+            else
+            {
+                phaseManager.phase = 2;
+            }
         }
         else
         {
             timer = 0;
         }
-        if (timer > chasetid)
-        {
-            StartCoroutine(dod());
-        }
+
     }
     public Vector3 DirFromAngle (float angleinDegrees)
     {

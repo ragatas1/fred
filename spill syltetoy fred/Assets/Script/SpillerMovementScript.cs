@@ -21,6 +21,7 @@ public class SpillerMovementScript : MonoBehaviour
     public float ventetid;
     public GameObject txt1;
     public bool grounded;
+    public float faTilbakeHoppTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,14 @@ public class SpillerMovementScript : MonoBehaviour
             if (Input.GetButtonDown("Interact"))
             {
                 rb.AddForce(0, hoppeKraft, 0);
+                faTilbakeHoppTimer = 0;
+                grounded = false;
             }
+        }
+        faTilbakeHoppTimer = faTilbakeHoppTimer+1*Time.deltaTime;
+        if (faTilbakeHoppTimer>3)
+        {
+            grounded = true;
         }
     }
     private void OnCollisionEnter(Collision collision)

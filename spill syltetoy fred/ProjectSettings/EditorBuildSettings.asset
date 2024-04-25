@@ -12,9 +12,21 @@ EditorBuildSettings:
     path: Assets/Scenes/BaneTilPrototype.unity
     guid: 766a77c6778635646b783f9d6b1d2f68
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
-    guid: fc66cbda65cc31a4a8fbffaf1a4f1b1a
+    path: Assets/Scenes/Bane4.unity
+    guid: 31e43d8c474021b4ba393c4825ec6518
+  - enabled: 1
+    path: Assets/Scenes/Bane3.unity
+    guid: 3a8627b606f5e234b9aaca76cbab848b
+  - enabled: 1
+    path: Assets/Scenes/mgsKopi.unity
+    guid: bc221e363e6749845a66fd6f6b4f7c0d
   - enabled: 1
     path: Assets/Scenes/fanget.unity
     guid: c7998686813b8bb4c9e4070ad4f0d726
+  - enabled: 1
+    path: Assets/Scenes/LevelWin.unity
+    guid: 1b845d08f3aa44047a5f20f83a276350
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: fc66cbda65cc31a4a8fbffaf1a4f1b1a
   m_configObjects: {}

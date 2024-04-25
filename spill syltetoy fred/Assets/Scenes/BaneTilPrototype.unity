@@ -887,7 +887,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec34961d49846414dbe6a9cb70267c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  falseProphet: {fileID: 0}
+  forigeScene: 
+  denneScenen: 
+  scener:
+  - BaneTilPrototype
+  - Bane4
+  - Bane3
+  - mgsKopi
 --- !u!4 &456287500
 Transform:
   m_ObjectHideFlags: 0

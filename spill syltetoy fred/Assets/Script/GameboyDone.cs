@@ -8,6 +8,7 @@ public class GameboyDone : MonoBehaviour
     public bool iSenga;
     public SpillerPickup Gaeboy;
     public GameObject txt;
+    public string nextScene;
    
     void Start()
     {
@@ -24,7 +25,7 @@ public class GameboyDone : MonoBehaviour
                 txt.SetActive(true);
                 if (Input.GetButtonDown("Interact"))
                 {
-                    SceneManager.LoadScene("WinScreen");
+                    SceneManager.LoadScene(nextScene);
                 }
             }
             else

@@ -680,6 +680,7 @@ MonoBehaviour:
   iSenga: 0
   Gaeboy: {fileID: 2057115274589501962}
   txt: {fileID: 1913375790}
+  nextScene: 
 --- !u!1 &406400720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,7 +3704,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2483128639428632828, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.14
+      value: -11.9
       objectReference: {fileID: 0}
     - target: {fileID: 2483128639428632828, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3711,7 +3712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483128639428632828, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.54
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2483128639428632828, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3747,7 +3748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2589361575781651478, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4004941864290887899, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: txt
@@ -7291,15 +7292,15 @@ PrefabInstance:
       objectReference: {fileID: 257357689}
     - target: {fileID: 7532954565429544318, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.57
+      value: -9.74
       objectReference: {fileID: 0}
     - target: {fileID: 7532954565429544318, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.0821521
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 7532954565429544318, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.51
+      value: -13.59
       objectReference: {fileID: 0}
     - target: {fileID: 7532954565429544318, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_LocalRotation.w

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11670,6 +11670,7 @@ MonoBehaviour:
   iSenga: 0
   Gaeboy: {fileID: 0}
   txt: {fileID: 2108273758}
+  nextScene: 
 --- !u!65 &1030460169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18216,6 +18217,7 @@ MonoBehaviour:
   iSenga: 0
   Gaeboy: {fileID: 0}
   txt: {fileID: 2108273758}
+  nextScene: 
 --- !u!65 &1721227060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21115,7 +21117,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7791758227988165057, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: phase
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791758227988165057, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
+      propertyPath: alwaysChaseSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077482760318797178, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: sinnaTid

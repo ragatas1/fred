@@ -12,6 +12,8 @@ TagManager:
   - Gameboy
   - ground
   - spillerParent
+  - logikk
+  - logikkTrue
   layers:
   - Default
   - TransparentFX

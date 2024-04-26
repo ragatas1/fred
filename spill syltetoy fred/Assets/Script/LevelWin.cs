@@ -10,6 +10,7 @@ public class LevelWin : MonoBehaviour
     public float wait;
     GameObject test;
     NextLevel nextLevel;
+    public GameObject bakgrunn;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,14 @@ public class LevelWin : MonoBehaviour
         StartCoroutine(paStart());
         txt1.SetActive(false);
         txt2.SetActive(false);
+        if (nextLevel.nesteScene == "mgsKopi")
+        {
+            bakgrunn.SetActive(true);
+        }
+        else
+        {
+            bakgrunn.SetActive(false);
+        } 
     }
 
     IEnumerator paStart()

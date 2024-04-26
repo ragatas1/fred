@@ -27,12 +27,9 @@ public class DorApneScript : MonoBehaviour
                 door.OpenDoor();
                 box.enabled = false;
                 spiller.HarGameboy = false;
+                txt.SetActive(false);
+                Destroy(gameObject);
             }
-            txt.SetActive(true);
-        }
-        else
-        {
-            txt.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -40,6 +37,8 @@ public class DorApneScript : MonoBehaviour
         if (other.tag == "spiller")
         {
             vedDor = true;
+            txt.SetActive(true);
+
         }
 
     }
@@ -48,6 +47,7 @@ public class DorApneScript : MonoBehaviour
         if (other.tag == "spiller")
         {
             vedDor = false;
+            txt.SetActive(false);
         }
 
     }

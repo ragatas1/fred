@@ -14,7 +14,14 @@ public class StartGame : MonoBehaviour
     }
     private void Start()
     {
-        Cursor.visible = true;
+        Cursor.visible = false;
 
+    }
+    private void Update()
+    {
+        if (Input.GetButton("Interact"))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

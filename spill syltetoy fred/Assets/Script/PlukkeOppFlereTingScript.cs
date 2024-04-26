@@ -8,6 +8,8 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
     public float antallTing;
     public float antallhar;
     public GameObject txt;
+    public GameObject txt2;
+    bool slutt = false;
     bool paTing;
     bool paEnd;
     GameObject theCurrentThing;
@@ -21,6 +23,7 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
         nextLevel = test.GetComponent<NextLevel>();
         endZone = GameObject.FindGameObjectWithTag("endZone");
         endZone.SetActive(false);
+        nextLevel.sjekkScene();
     }
 
     // Update is called once per frame
@@ -53,6 +56,10 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
         if (antallhar == antallTing)
         {
             endZone.SetActive (true);
+            if (!slutt)
+            {
+                StartCoroutine(sluttTekst());
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -77,5 +84,12 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
         {
             paEnd = false;
         }
+    }
+    IEnumerator sluttTekst()
+    {
+        txt2.SetActive(true);
+        slutt = true;
+        yield return new WaitForSeconds(5);
+        txt2.SetActive(false);
     }
 }

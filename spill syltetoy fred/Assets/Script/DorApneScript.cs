@@ -37,7 +37,10 @@ public class DorApneScript : MonoBehaviour
         if (other.tag == "spiller")
         {
             vedDor = true;
-            txt.SetActive(true);
+            if (spiller.HarGameboy)
+            {
+                txt.SetActive(true);
+            }
 
         }
 
@@ -47,7 +50,9 @@ public class DorApneScript : MonoBehaviour
         if (other.tag == "spiller")
         {
             vedDor = false;
-            txt.SetActive(false);
+
+                txt.SetActive(false);
+            
         }
 
     }

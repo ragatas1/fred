@@ -25,9 +25,13 @@ public class flyttMotCheckpointScript : MonoBehaviour
     }
     private void Update()
     {
-        if (phaseManager.phase == 1) 
+        if (nextLevel.bane3Checkpoint)
         {
-            phaseManager.phase = 0;
+            if (phaseManager.phase == 1)
+            {
+                phaseManager.phase = 0;
+            }
         }
+
     }
 }

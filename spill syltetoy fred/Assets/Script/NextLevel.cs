@@ -53,6 +53,7 @@ public class NextLevel : MonoBehaviour
     }
     public void finnNesteScene()
     {
+        /*
         if (denneScenen == scener[0]|| denneScenen == scener[1] || denneScenen == scener[2])
         {
             nesteScene = "LevelWin";
@@ -61,7 +62,8 @@ public class NextLevel : MonoBehaviour
         {
             nesteScene = forigeScene;
         }
-        else if (forigeScene == scener[0])
+        */
+        if (forigeScene == scener[0])
         {
             nesteScene = scener[1];
         }

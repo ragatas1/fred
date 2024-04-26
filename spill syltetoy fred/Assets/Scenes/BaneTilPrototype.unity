@@ -7287,6 +7287,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
+      propertyPath: sensXMus
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
+      propertyPath: sensYMus
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 4075545124743196470, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_Name
       value: kamera+spiller

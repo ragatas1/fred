@@ -44,7 +44,7 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
         {
             if (Input.GetButton("Interact"))
             {
-                SceneManager.LoadScene(nextLevel.nesteScene);
+                SceneManager.LoadScene("LevelWin");
             }
         }
         if (paTing || paEnd)

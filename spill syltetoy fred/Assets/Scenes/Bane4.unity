@@ -5631,6 +5631,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
+      propertyPath: sensXMus
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 480090798864462502, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
+      propertyPath: sensYMus
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 4075545124743196470, guid: e8f0ac47d550e0541b3ba96df4fa2db6, type: 3}
       propertyPath: m_Name
       value: kamera+spiller
@@ -9781,7 +9789,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 875ff3a8614216c4faf8dfe8b09a2af8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -16282,7 +16290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2589361575781651478, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3721027867885096309, guid: e4d89d6a6d4a6b04bb6cd9b725f86a2d, type: 3}
       propertyPath: m_IsActive

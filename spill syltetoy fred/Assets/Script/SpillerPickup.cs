@@ -10,6 +10,7 @@ public class SpillerPickup : MonoBehaviour
     public GameObject txt;
     public GameObject txt2;
     public float ventetid;
+    public AudioSource lyd;
     void Start()
     {
         Gameboy = GameObject.FindGameObjectWithTag("Gameboy");
@@ -28,6 +29,7 @@ public class SpillerPickup : MonoBehaviour
                 GameBoyPlukkOpp = false;
                 StartCoroutine(text());
                 txt.SetActive(false);
+                lyd.Play();
             }
         }
     }

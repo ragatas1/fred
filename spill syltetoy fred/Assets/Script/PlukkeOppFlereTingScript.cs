@@ -16,6 +16,7 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
     GameObject endZone;
     GameObject test;
     NextLevel nextLevel;
+    public AudioSource lyd;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class PlukkeOppFlereTingScript : MonoBehaviour
                 antallhar = antallhar + 1;
                 Destroy(theCurrentThing);
                 paTing = false;
+                lyd.Play();
             }
         }
         if (paEnd)

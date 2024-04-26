@@ -17,9 +17,9 @@ public class LevelWin : MonoBehaviour
         test = GameObject.FindGameObjectWithTag("logikk");
         nextLevel = test.GetComponent<NextLevel>();
         nextLevel.sjekkScene();
-        StartCoroutine(paStart());
         txt1.SetActive(false);
         txt2.SetActive(false);
+        StartCoroutine(paStart());
         if (nextLevel.nesteScene == "mgsKopi")
         {
             bakgrunn.SetActive(true);
@@ -32,7 +32,6 @@ public class LevelWin : MonoBehaviour
 
     IEnumerator paStart()
     {
-        yield return new WaitForSeconds(wait);
         txt1.SetActive(true);
         yield return new WaitForSeconds(wait);
         txt2.SetActive(true);

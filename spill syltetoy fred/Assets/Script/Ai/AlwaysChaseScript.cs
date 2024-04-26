@@ -11,6 +11,8 @@ public class AlwaysChaseScript : MonoBehaviour
     [HideInInspector] public float rubberBanding;
     public float rubberBandingSpeed;
     public float ja;
+    public GameObject pappaKommer;
+    public GameObject txt;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class AlwaysChaseScript : MonoBehaviour
             spiller = GameObject.FindGameObjectWithTag("hidden");
         }
         agent = GetComponent<NavMeshAgent>();
+        pappaKommer.SetActive(true);
+        StartCoroutine(naKommern());
     }
 
     // Update is called once per frame
@@ -46,5 +50,11 @@ public class AlwaysChaseScript : MonoBehaviour
         }
         ja = (Vector3.Distance(transform.position, spiller.transform.position));
 
+    }
+    IEnumerator naKommern()
+    {
+        txt.SetActive(true);
+        yield return new WaitForSeconds(5);
+        txt.SetActive(false);
     }
 }
